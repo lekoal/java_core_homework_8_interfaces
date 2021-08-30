@@ -36,10 +36,10 @@ public class Wall implements Obstacle {
             this.name = ((Robot) x).name;
             this.maxJump = ((Robot) x).maxJump;
 
-            if (maxJump >= value && ((Robot) x).getAction()) { // Проверка на возможность прыжка
+            if (maxJump >= value && x.getAction()) { // Проверка на возможность прыжка
                 System.out.printf("%s jump %s meters%n", name, value);
                 x.setAction(true);
-            } else if (maxJump < value && ((Robot) x).getAction()) {
+            } else if (maxJump < value && x.getAction()) {
                 System.out.printf("%s cant jump %s meters%n", name, value);
                 x.setAction(false); // Изменение значения переменной действий
             }
